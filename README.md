@@ -2,7 +2,7 @@
 
 A customizable voice recording component for React applications with pause/resume functionality, timer, and style customization.
 
-![Voice Recorder Demo](https://via.placeholder.com/600x400.png?text=Voice+Recorder+Demo)
+![Voice Recorder Demo](https://github.com/mostafijur-rahman299/react-voice-record/blob/master/assets/demo.gif)
 
 ## Features
 
