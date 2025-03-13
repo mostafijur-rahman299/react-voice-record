@@ -1,0 +1,45 @@
+{
+  "name": "react-voice-record",
+  "version": "1.0.0",
+  "description": "A customizable React voice recorder component",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "voice recorder",
+    "audio",
+    "recording",
+    "microphone"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10", 
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mostafijur-rahman299/react-voice-record.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mostafijur-rahman299/react-voice-record/issues"
+  },
+  "homepage": "https://github.com/mostafijur-rahman299/react-voice-record",
+  "author": "Mostafijur Rahman",
+  "license": "MIT"
+}
