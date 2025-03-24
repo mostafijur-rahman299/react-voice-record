@@ -101,6 +101,7 @@ export default App;
 | **`audioConstraints`** | object    | `{ echoCancellation: true, noiseSuppression: true, autoGainControl: true }` | Audio constraints |
 | **`mediaRecorderOptions`** | object | `{ mimeType: 'audio/webm;codecs=opus' }` | MediaRecorder options |
 | **`chunkDuration`**    | number    | `1000`   | Data chunking interval (ms) |
+| **``**    | number    | `1000`   | Data chunking interval (ms) |
 
 
 ## Styling Guide

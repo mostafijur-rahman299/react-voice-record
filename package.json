@@ -1,6 +1,6 @@
 {
   "name": "react-voice-record",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A customizable React voice recorder component",
   "main": "lib/VoiceRecorder.js",
   "module": "lib/VoiceRecorder.js",

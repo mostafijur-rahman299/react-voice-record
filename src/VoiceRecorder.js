@@ -114,6 +114,7 @@ const VoiceRecorder = ({
   },
   mediaRecorderOptions = { mimeType: 'audio/webm;codecs=opus' },
   chunkDuration = 1000,
+  mimeType = 'audio/webm;codecs=opus',
 }) => {
   const [recording, setRecording] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -175,7 +176,7 @@ const VoiceRecorder = ({
       const stream = await navigator.mediaDevices.getUserMedia({ audio: audioConstraints });
       streamRef.current = stream;
       
-      const mediaRecorder = new MediaRecorder(stream, mediaRecorderOptions);
+      const mediaRecorder = new MediaRecorder(stream, { ...mediaRecorderOptions, mimeType });
       mediaRecorderRef.current = mediaRecorder;
 
       mediaRecorder.ondataavailable = ({ data }) => {
@@ -183,7 +184,7 @@ const VoiceRecorder = ({
       };
 
       mediaRecorder.onstop = () => {
-        const blob = new Blob(audioChunksRef.current, { type: mediaRecorderOptions.mimeType });
+        const blob = new Blob(audioChunksRef.current, { type: mimeType });
         onRecordingStop?.(blob);
         audioChunksRef.current = [];
       };
@@ -333,6 +334,7 @@ VoiceRecorder.propTypes = {
   audioConstraints: PropTypes.object,
   mediaRecorderOptions: PropTypes.object,
   chunkDuration: PropTypes.number,
+  mimeType: PropTypes.string,
 };
 
 export default VoiceRecorder;
